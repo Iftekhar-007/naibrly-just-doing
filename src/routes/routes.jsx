@@ -22,6 +22,13 @@ import EditAbout from "../pages/dashboardpages/about/EditAbout";
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
 import AllUsers from "../pages/dashboardpages/user/AllUsers";
 
+// TODO: Create these new page components
+// import Payment from "../pages/dashboardpages/payment/Payment";
+// import Providers from "../pages/dashboardpages/providers/Providers";
+// import Categories from "../pages/dashboardpages/categories/Categories";
+// import Withdraw from "../pages/dashboardpages/withdraw/Withdraw";
+// import Support from "../pages/dashboardpages/support/Support";
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -48,10 +55,17 @@ const routes = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       { index: true, element: <DashboardOverview /> },
-      { path: "notificatons", element: <AllNotifications /> },
+      { path: "notifications", element: <AllNotifications /> },
       { path: "users", element: <AllUsers /> },
 
-      // Settings
+      // New Routes - TODO: Create these page components
+      // { path: "payment", element: <Payment /> },
+      // { path: "providers", element: <Providers /> },
+      // { path: "categories", element: <Categories /> },
+      // { path: "withdraw", element: <Withdraw /> },
+      // { path: "support", element: <Support /> },
+
+      // Settings Routes
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },
       { path: "settings/terms", element: <TermsAndConditions /> },
