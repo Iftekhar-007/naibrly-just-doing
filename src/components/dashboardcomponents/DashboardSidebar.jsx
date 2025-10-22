@@ -60,8 +60,8 @@ function LogoSection() {
   return (
     <Link to="/dashboard">
       <div className="flex items-center gap-2 px-12 py-4 border-b border-gray-200">
-        <div className=" rounded-lg">
-          <img src={logo} alt="" />
+        <div className="rounded-lg">
+          <img src={logo} alt="logo" />
         </div>
         <h1 className="text-2xl font-bold text-gray-900">Naibrly</h1>
       </div>
@@ -103,7 +103,7 @@ function MenuSection({ title, items, onLinkClick }) {
                     className={cn(
                       "w-full justify-start gap-3 h-10 text-sm font-medium px-4 transition-colors duration-150",
                       isActive
-                        ? "bg-[#0E7A60] text-white hover:bg-[#0c725a]"
+                        ? "bg-[#0E7A60] text-white hover:bg-[#0c725a] hover:text-white"
                         : "text-gray-700 hover:bg-[#0E7A60] hover:text-white"
                     )}
                   >
@@ -115,6 +115,8 @@ function MenuSection({ title, items, onLinkClick }) {
                       <ChevronRight className="h-4 w-4" />
                     )}
                   </Button>
+
+                  {/* Child menu items */}
                   <div
                     className={cn(
                       "transition-all overflow-hidden duration-200 ml-4",
@@ -132,7 +134,7 @@ function MenuSection({ title, items, onLinkClick }) {
                                 className={cn(
                                   "w-full justify-start gap-3 h-10 text-sm font-medium px-4 transition-colors duration-150",
                                   isChildActive
-                                    ? "bg-[#0E7A60] text-white hover:bg-[#0c725a]"
+                                    ? "bg-[#0E7A60] text-white hover:bg-[#0c725a] hover:text-white"
                                     : "text-gray-700 hover:bg-[#0E7A60] hover:text-white"
                                 )}
                               >
@@ -153,7 +155,7 @@ function MenuSection({ title, items, onLinkClick }) {
                     className={cn(
                       "w-full justify-start gap-3 h-10 text-sm font-medium px-4 transition-colors duration-150",
                       isActive
-                        ? "bg-[#0E7A60] text-white hover:bg-[#0c725a]"
+                        ? "bg-[#0E7A60] text-white hover:bg-[#0c725a] hover:text-white"
                         : "text-gray-700 hover:bg-[#0E7A60] hover:text-white"
                     )}
                   >
