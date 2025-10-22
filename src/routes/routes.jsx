@@ -62,6 +62,7 @@ const routes = createBrowserRouter([
       { path: "support", element: <Support /> },
 
       // Settings Routes
+      // { path: "settings", element: <Settings /> },
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },
       { path: "settings/terms", element: <TermsAndConditions /> },
