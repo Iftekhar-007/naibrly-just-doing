@@ -4,22 +4,24 @@ import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import flag from "../../../assets/flag.png";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { Link } from "react-router-dom"; // ✅ Correct routing link
+import { Link, useNavigate } from "react-router-dom"; // ✅ Correct routing link
 
 const Profile = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen font-sans">
       <div className="flex items-center justify-between">
         {/* Header */}
         <div className="flex items-center text-black  text-xl font-semibold rounded-md">
-          <MdOutlineKeyboardArrowLeft size={40}/>
+          <MdOutlineKeyboardArrowLeft size={40} className="cursor-pointer" onClick={()=>{navigate(-1)}}/>
           Personal Information
         </div>
+        {/* first button color -  #017783 */}
 
         {/* Edit Profile Button */}
         <div className="flex justify-end">
           <Link to="/dashboard/settings/editpersonal">
-            <Button className="bg-[#017783] hover:bg-[#017783] text-white px-6 py-2 rounded-lg flex items-center space-x-2 shadow-md">
+            <Button className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white px-6 py-2 rounded-lg flex items-center space-x-2 shadow-md">
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -112,7 +114,7 @@ const Profile = () => {
                 Phone No.
               </Label>
               <div className="flex items-center space-x-2">
-                <div className="flex items-center border border-gray-200 bg-gray-50 rounded-md px-3 py-2 text-gray-800">
+                <div className="flex items-center border border-gray-200 bg-[#0E7A60] rounded-md px-3 py-2 text-white">
                   <img
                     src={flag}
                     alt="Bangladesh Flag"

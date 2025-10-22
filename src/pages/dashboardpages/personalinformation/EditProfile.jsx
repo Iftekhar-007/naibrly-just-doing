@@ -5,9 +5,12 @@ import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Upload } from "lucide-react";
 import flag from "../../../assets/flag.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const EditProfile = () => {
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "Isabela",
     email: "Isabela@gmail.com",
@@ -44,9 +47,31 @@ const EditProfile = () => {
 
   return (
     <div className="min-h-screen font-sans bg-gray-50">
-      {/* Header */}
-      <div className="bg-[#017783] text-white p-4 text-xl font-semibold flex justify-between items-center rounded-md">
-        <span>Edit Personal Information</span>
+
+      <div className="flex items-center justify-between">
+
+
+        {/* Header */}
+        <div className=" text-black p-4 text-xl font-semibold flex justify-between items-center rounded-md">
+
+           {/* <button
+    onClick={() => navigate(-1)}
+    className="flex items-center gap-2 cursor-pointer"
+  >
+    <MdOutlineKeyboardArrowLeft size={30} />
+    <span>Edit Personal Information</span>
+  </button> */}
+
+          <span className="flex items-center"> <MdOutlineKeyboardArrowLeft size={40} className="cursor-pointer" onClick={() => navigate(-1)} />Edit Personal Information</span>
+        </div>
+
+        <Button
+          onClick={handleSaveChanges}
+          className=" bg-[#0E7A60] hover:bg-[#0E7A60] text-white"
+        >
+          Save Changes
+        </Button>
+
       </div>
 
       {/* Main Content Area */}
@@ -139,7 +164,7 @@ const EditProfile = () => {
             </div>
 
             {/* Additional Action Buttons */}
-            <div className="flex space-x-4 pt-4">
+            {/* <div className="flex space-x-4 pt-4">
               <div>
                 <Link to={"/dashboard/settings/personal"}>
                   <Button
@@ -156,7 +181,7 @@ const EditProfile = () => {
               >
                 Save Changes
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
