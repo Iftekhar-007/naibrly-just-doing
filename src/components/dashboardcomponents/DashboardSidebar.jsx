@@ -51,7 +51,7 @@ const otherMenuItems = [
         href: "/dashboard/settings/privacy",
         icon: FileText,
       },
-      { title: "About Us", href: "/dashboard/settings/about", icon: Info },
+      { title: "FAQ", href: "/dashboard/settings/faq", icon: Info },
     ],
   },
 ];

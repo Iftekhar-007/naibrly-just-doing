@@ -26,6 +26,7 @@ import Providers from "../pages/dashboardpages/providers/Providers";
 import Categories from "../pages/dashboardpages/categories/Categories";
 import Withdraw from "../pages/dashboardpages/withdraw/Withdraw";
 import Support from "../pages/dashboardpages/support/Support";
+import Faq from "@/pages/dashboardpages/faq/Faq";
 
 const routes = createBrowserRouter([
   {
@@ -69,7 +70,7 @@ const routes = createBrowserRouter([
       { path: "settings/editterms", element: <EditTermsAndConditions /> },
       { path: "settings/privacy", element: <PrivacyPolicy /> },
       { path: "settings/editprivacy", element: <EditPrivacyPolicy /> },
-      { path: "settings/about", element: <AboutUs /> },
+      { path: "settings/faq", element: <Faq /> },
       { path: "settings/editabout", element: <EditAbout /> },
     ],
   },
