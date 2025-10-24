@@ -27,7 +27,7 @@ import {  Link } from 'react-router-dom';
 const Setting = () => {
     return (
         <div className='text-black bg-[#FFFFFF] p-10 rounded-2xl'>
-            {settingItem.map((Item,index)=><div key={index} className='flex justify-between py-5'>
+            {settingItem.map((Item,index)=><div key={index} className='flex justify-between p-5 hover:bg-[#0E7A601A]/90 rounded-lg'>
                 <Link to={Item.href}>
                 {Item.title}
                

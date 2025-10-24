@@ -89,7 +89,8 @@ function MenuSection({ title, items, onLinkClick }) {
       )}
       <ul className="space-y-1">
         {items.map((item) => {
-          const isActive = location.pathname === item.href;
+          const isActive = location.pathname === item.href ||
+            (item.title === "Setting" && location.pathname.startsWith("/dashboard/settings/"));
           const hasChildren = !!item.children?.length;
           const expanded = isExpanded(item.href);
 
