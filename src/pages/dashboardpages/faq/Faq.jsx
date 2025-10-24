@@ -61,33 +61,37 @@ const Faq = () => {
         </Button> */}
 
         <AlertDialog>
-          <AlertDialogTrigger><Button className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white rounded-md shadow-md">
+          <AlertDialogTrigger><Button className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white rounded-md shadow-md ">
             + Add FAQ
           </Button></AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>Add new FAQ</AlertDialogTitle>
+              <AlertDialogTitle className='text-[#01010B] lg:text-[2rem]'>Add new FAQ</AlertDialogTitle>
               <AlertDialogDescription>
                 <form action="" className="flex flex-col gap-4">
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="">Question</label>
-                    <input type="text" placeholder="How to apply for a Campaign?" className="border p-2 bg-gray-100" />
+                    <label htmlFor="" className="text-sm text-[#5B5B5F] font-medium">Question</label>
+                    <input type="text" placeholder="How to apply for a Campaign?" className="border p-2 bg-[#E6E6E7] rounded-sm" />
                   </div>
 
                   <div className="flex flex-col gap-2">
 
 
 
-                    <label htmlFor="">Answer</label>
-                    <textarea rows="4" placeholder="Answer" className="bg-gray-100 p-5"></textarea>
+                    <label htmlFor="" className="text-sm text-[#5B5B5F] font-medium">Answer</label>
+                    <textarea rows="4" placeholder="Answer" className="border p-2 bg-[#E6E6E7] rounded-sm" ></textarea>
                   </div>
                 </form>
               </AlertDialogDescription>
             </AlertDialogHeader>
-            <AlertDialogFooter className="w-full">
-              <AlertDialogCancel><button className="w-full">Cancel</button></AlertDialogCancel>
-              <AlertDialogAction><button className="w-full">Suubmit</button></AlertDialogAction>
+            <AlertDialogFooter className="">
+
+              <div className="w-full flex flex-row gap-3">
+                <AlertDialogCancel className="flex-1/2 text-[#0E7A60] lg:text-[1rem] border border-[#0E7A60] hover:text-[#0E7A60] hover:border-[#0E7A60] hover:bg-transparent font-intertext"><button className="">Cancel</button></AlertDialogCancel>
+                <AlertDialogAction className="flex-1/2 text-white bg-[#0E7A60] hover:bg-[#0E7A60] font-intertext"><button className="">Submit</button></AlertDialogAction>
+              </div>
+
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>

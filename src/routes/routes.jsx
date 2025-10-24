@@ -27,6 +27,7 @@ import Categories from "../pages/dashboardpages/categories/Categories";
 import Withdraw from "../pages/dashboardpages/withdraw/Withdraw";
 import Support from "../pages/dashboardpages/support/Support";
 import Faq from "@/pages/dashboardpages/faq/Faq";
+import Setting from "@/pages/dashboardpages/setting/Settings";
 
 const routes = createBrowserRouter([
   {
@@ -45,10 +46,10 @@ const routes = createBrowserRouter([
     path: "/otpverification",
     element: <OTPVerification />,
   },
-  {
-    path: "/resetPassword",
-    element: <ResetPassword />,
-  },
+  // {
+  //   path: "/resetPassword",
+  //   element: <ResetPassword />,
+  // },
   {
     path: "/dashboard",
     element: <DashboardLayout />,
@@ -63,8 +64,9 @@ const routes = createBrowserRouter([
       { path: "support", element: <Support /> },
 
       // Settings Routes
-      // { path: "settings", element: <Settings /> },
+      { path: "settings", element: <Setting /> },
       { path: "settings/profile", element: <Profile /> },
+      { path: "settings/resetPassword", element: <ResetPassword />},
       { path: "settings/editpersonal", element: <EditProfile /> },
       { path: "settings/terms", element: <TermsAndConditions /> },
       { path: "settings/editterms", element: <EditTermsAndConditions /> },

@@ -39,20 +39,20 @@ const otherMenuItems = [
     title: "Setting",
     href: "/dashboard/settings",
     icon: Settings,
-    children: [
-      { title: "Profile", href: "/dashboard/settings/profile", icon: UserCog },
-      {
-        title: "Terms & Condition",
-        href: "/dashboard/settings/terms",
-        icon: ScrollText,
-      },
-      {
-        title: "Privacy Policy",
-        href: "/dashboard/settings/privacy",
-        icon: FileText,
-      },
-      { title: "FAQ", href: "/dashboard/settings/faq", icon: Info },
-    ],
+    // children: [
+    //   { title: "Profile", href: "/dashboard/settings/profile", icon: UserCog },
+    //   {
+    //     title: "Terms & Condition",
+    //     href: "/dashboard/settings/terms",
+    //     icon: ScrollText,
+    //   },
+    //   {
+    //     title: "Privacy Policy",
+    //     href: "/dashboard/settings/privacy",
+    //     icon: FileText,
+    //   },
+    //   { title: "FAQ", href: "/dashboard/settings/faq", icon: Info },
+    // ],
   },
 ];
 
