@@ -226,38 +226,7 @@ const Withdraw = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Final Approval Confirmation Dialog */}
-      {/* <Dialog open={openFinalApproveDialog} onOpenChange={setOpenFinalApproveDialog}>
-        <DialogTrigger />
-        <DialogContent className="w-[400px] p-6 rounded-lg bg-white">
-          <DialogHeader>
-            <DialogTitle className="text-sm font-normal">Final Approval</DialogTitle>
-          </DialogHeader>
-          <DialogDescription>
-            <div>
-              <p className="text-xl font-medium">Are you sure you want to approve this withdrawal request?</p>
-              <p className="py-3 text-sm font-semibold text-[#585858]">Account No: ****{selectedRequest?.accountNo.slice(-4)}</p>
-              <p className="py-3 text-sm font-semibold text-[#585858]">Amount: {selectedRequest?.amount}</p>
-              <p className="py-3 text-sm font-semibold text-[#585858]">Request Date: {selectedRequest?.requestDate}</p>
-            </div>
-          </DialogDescription>
-          <DialogFooter>
-            <Button
-              variant="outline"
-              className="mr-2 border border-[#0E7A60] rounded-2xl text-[#0E7A60] hover:text-[#0E7A60]"
-              onClick={() => setOpenFinalApproveDialog(false)}
-            >
-              Cancel
-            </Button>
-            <Button
-              className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white"
-              onClick={() => setOpenFinalApproveDialog(false)} // You can replace this with your approval logic
-            >
-              Yes, Approve
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog> */}
+     
 
       <Dialog open={openFinalApproveDialog} onOpenChange={setOpenFinalApproveDialog}>
         <DialogTrigger />

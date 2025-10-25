@@ -69,6 +69,110 @@ function LogoSection() {
   );
 }
 
+// function MenuSection({ title, items, onLinkClick }) {
+//   const location = useLocation();
+//   const [expandedItems, setExpandedItems] = useState([]);
+
+//   const toggleExpanded = (href) =>
+//     setExpandedItems((prev) =>
+//       prev.includes(href) ? prev.filter((i) => i !== href) : [...prev, href]
+//     );
+
+//   const isExpanded = (href) => expandedItems.includes(href);
+
+//   return (
+//     <div className="mb-6">
+//       {title && (
+//         <h3 className="px-4 mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+//           {title}
+//         </h3>
+//       )}
+//       <ul className="space-y-1">
+//         {items.map((item) => {
+//           const isActive = location.pathname === item.href ||
+//             (item.title === "Setting" && location.pathname.startsWith("/dashboard/settings/"));
+//           const hasChildren = !!item.children?.length;
+//           const expanded = isExpanded(item.href);
+
+//           return (
+//             <li key={item.href}>
+//               {hasChildren ? (
+//                 <>
+//                   <Button
+//                     variant="ghost"
+//                     onClick={() => toggleExpanded(item.href)}
+//                     className={cn(
+//                       "w-full justify-start gap-3 h-10 text-sm font-medium px-4 transition-colors duration-150",
+//                       isActive
+//                         ? "bg-[#0E7A60] text-white hover:bg-[#0c725a] hover:text-white"
+//                         : "text-gray-700 hover:bg-[#0E7A60] hover:text-white"
+//                     )}
+//                   >
+//                     <item.icon className="h-5 w-5" />
+//                     <span className="flex-1 text-left">{item.title}</span>
+//                     {expanded ? (
+//                       <ChevronDown className="h-4 w-4" />
+//                     ) : (
+//                       <ChevronRight className="h-4 w-4" />
+//                     )}
+//                   </Button>
+
+//                   {/* Child menu items */}
+//                   <div
+//                     className={cn(
+//                       "transition-all overflow-hidden duration-200 ml-4",
+//                       expanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+//                     )}
+//                   >
+//                     <ul className="space-y-1 mt-1">
+//                       {item.children.map((child) => {
+//                         const isChildActive = location.pathname === child.href;
+//                         return (
+//                           <li key={child.href}>
+//                             <Link to={child.href} onClick={onLinkClick}>
+//                               <Button
+//                                 variant="ghost"
+//                                 className={cn(
+//                                   "w-full justify-start gap-3 h-10 text-sm font-medium px-4 transition-colors duration-150",
+//                                   isChildActive
+//                                     ? "bg-[#0E7A60] text-white hover:bg-[#0c725a] hover:text-white"
+//                                     : "text-gray-700 hover:bg-[#0E7A60] hover:text-white"
+//                                 )}
+//                               >
+//                                 <child.icon className="h-4 w-4" />
+//                                 {child.title}
+//                               </Button>
+//                             </Link>
+//                           </li>
+//                         );
+//                       })}
+//                     </ul>
+//                   </div>
+//                 </>
+//               ) : (
+//                 <Link to={item.href} onClick={onLinkClick}>
+//                   <Button
+//                     variant="ghost"
+//                     className={cn(
+//                       "w-full justify-start gap-3 h-10 text-sm font-medium px-4 transition-colors duration-150",
+//                       isActive
+//                         ? "bg-[#0E7A60] text-white hover:bg-[#0c725a] hover:text-white"
+//                         : "text-gray-700 hover:bg-[#0E7A60] hover:text-white"
+//                     )}
+//                   >
+//                     <item.icon className="h-5 w-5" />
+//                     {item.title}
+//                   </Button>
+//                 </Link>
+//               )}
+//             </li>
+//           );
+//         })}
+//       </ul>
+//     </div>
+//   );
+// }
+
 function MenuSection({ title, items, onLinkClick }) {
   const location = useLocation();
   const [expandedItems, setExpandedItems] = useState([]);
@@ -89,8 +193,11 @@ function MenuSection({ title, items, onLinkClick }) {
       )}
       <ul className="space-y-1">
         {items.map((item) => {
-          const isActive = location.pathname === item.href ||
-            (item.title === "Setting" && location.pathname.startsWith("/dashboard/settings/"));
+          const isActive =
+            location.pathname === item.href || // Check if the current route is exactly this route
+            (item.title === "Providers" && location.pathname.startsWith("/dashboard/providers/")) || // Providers main item check
+            (item.title === "Setting" && location.pathname.startsWith("/dashboard/settings/")); // Settings section check
+
           const hasChildren = !!item.children?.length;
           const expanded = isExpanded(item.href);
 
@@ -126,7 +233,7 @@ function MenuSection({ title, items, onLinkClick }) {
                   >
                     <ul className="space-y-1 mt-1">
                       {item.children.map((child) => {
-                        const isChildActive = location.pathname === child.href;
+                        const isChildActive = location.pathname === child.href; // Check if child route is active
                         return (
                           <li key={child.href}>
                             <Link to={child.href} onClick={onLinkClick}>
@@ -172,6 +279,7 @@ function MenuSection({ title, items, onLinkClick }) {
     </div>
   );
 }
+
 
 function SidebarNav({ onLinkClick }) {
   return (

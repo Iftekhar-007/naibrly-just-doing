@@ -28,6 +28,9 @@ import Withdraw from "../pages/dashboardpages/withdraw/Withdraw";
 import Support from "../pages/dashboardpages/support/Support";
 import Faq from "@/pages/dashboardpages/faq/Faq";
 import Setting from "@/pages/dashboardpages/setting/Settings";
+import ProvidersAccount from "@/pages/dashboardpages/providers/ProvidersAccount";
+import ProvidersBilling from "@/pages/dashboardpages/providers/ProvidersBilling";
+import UserAccount from "@/pages/dashboardpages/user/UserAccount";
 
 const routes = createBrowserRouter([
   {
@@ -57,8 +60,11 @@ const routes = createBrowserRouter([
       { index: true, element: <DashboardOverview /> },
       { path: "notifications", element: <AllNotifications /> },
       { path: "users", element: <AllUsers /> },
+      { path: "users/useraccount", element: <UserAccount /> },
       { path: "payment", element: <Payment /> },
       { path: "providers", element: <Providers /> },
+      { path: "providers/provideraccount", element: <ProvidersAccount /> },
+      { path: "providers/providerbilling", element: <ProvidersBilling /> },
       { path: "categories", element: <Categories /> },
       { path: "withdraw", element: <Withdraw /> },
       { path: "support", element: <Support /> },
