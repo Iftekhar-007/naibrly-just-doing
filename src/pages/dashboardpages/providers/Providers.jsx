@@ -77,7 +77,7 @@ const Providers = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className=" mx-auto bg-white p-10 rounded-lg">
       <div className="flex justify-between items-center mb-6">
         <div className="flex flex-row gap-3 px-4 py-2 border rounded-md mr-4">
           <Search />
@@ -91,7 +91,7 @@ const Providers = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto bg-white shadow-md rounded-lg">
+      <div className="overflow-x-auto bg-white  ">
         <table className="w-full text-sm text-left text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-100">
             <tr>
