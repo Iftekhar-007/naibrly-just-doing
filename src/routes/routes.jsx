@@ -31,6 +31,7 @@ import Setting from "@/pages/dashboardpages/setting/Settings";
 import ProvidersAccount from "@/pages/dashboardpages/providers/ProvidersAccount";
 import ProvidersBilling from "@/pages/dashboardpages/providers/ProvidersBilling";
 import UserAccount from "@/pages/dashboardpages/user/UserAccount";
+import QuickChat from "@/pages/dashboardpages/quickchat/QuickChat";
 
 const routes = createBrowserRouter([
   {
@@ -67,6 +68,7 @@ const routes = createBrowserRouter([
       { path: "providers/providerbilling", element: <ProvidersBilling /> },
       { path: "categories", element: <Categories /> },
       { path: "withdraw", element: <Withdraw /> },
+      { path: "quickchat", element: <QuickChat /> },
       { path: "support", element: <Support /> },
 
       // Settings Routes

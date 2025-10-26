@@ -52,7 +52,7 @@ const EditProfile = () => {
 
 
         {/* Header */}
-        <div className=" text-black p-4 text-xl font-semibold flex justify-between items-center rounded-md">
+        <div className=" text-black  text-xl font-semibold flex justify-between items-center rounded-md">
 
            {/* <button
     onClick={() => navigate(-1)}
@@ -75,7 +75,7 @@ const EditProfile = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto px-4 py-8 mt-16">
+      <div className="container mx-auto px-4  mt-8">
         {/* Profile Card and Information Fields */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Profile Card */}
@@ -106,7 +106,7 @@ const EditProfile = () => {
           </div>
 
           {/* Information Fields */}
-          <div className="md:col-span-2 bg-white p-6 rounded-lg shadow-md space-y-6">
+          <div className="md:col-span-2  p-6 rounded-lg  space-y-6">
             <div>
               <Label
                 htmlFor="name"
@@ -148,7 +148,7 @@ const EditProfile = () => {
                 Phone No.
               </Label>
               <div className="flex items-center space-x-2">
-                <div className="flex items-center border border-gray-300 bg-white rounded-md px-3 py-2 text-gray-800">
+                <div className="flex items-center border border-gray-300 bg-[#0E7A60] rounded-md px-3 py-2 text-[#FEFEFE]">
                   <img src={flag} alt="Bangladesh" className="h-4 w-6 mr-2" />
                   <span>+1242</span>
                 </div>

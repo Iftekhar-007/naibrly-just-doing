@@ -962,7 +962,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="">
       {/* Add Category Dialog */}
       <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
         <DialogContent className="w-[480px] bg-white p-6 rounded-lg shadow-lg">

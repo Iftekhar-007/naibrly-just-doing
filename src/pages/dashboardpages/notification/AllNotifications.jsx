@@ -57,7 +57,7 @@ const AllNotifications = () => {
       {notifications.map((notification, index) => (
         <div
           key={index}
-          className="bg-white p-6 rounded-lg shadow-md flex items-start gap-4"
+          className="bg-white p-6 rounded-lg shadow-md flex items-start gap-4 border border-black border-l-2"
         >
           {/* Avatar */}
           <img
@@ -69,7 +69,10 @@ const AllNotifications = () => {
           {/* Content */}
           <div className="flex flex-col flex-grow">
             <div className="flex justify-between">
-              <h3 className="text-lg font-semibold">{notification.title}</h3>
+              <div className="flex  items-center gap-5">
+                <h3 className="text-lg font-semibold">{notification.title}</h3>
+                <p className="bg-[#FFF7D6] px-3 py-1 rounded-lg text-[#F1C400]">Pending</p>
+              </div>
               <span className="text-sm text-gray-400">{notification.date}</span>
             </div>
 
@@ -128,10 +131,10 @@ const AllNotifications = () => {
             <div className="flex items-center justify-between mt-4">
               {/* <span className="text-sm text-yellow-500">{notification.status}</span> */}
               <div className="flex gap-4">
-                <Button variant="outline" className="text-red-500">
+                <Button variant="outline" className="text-black hover:bg-[##0E7A601A]/90 bg-[#0E7A601A]/90">
                   Reject
                 </Button>
-                <Button className="text-green-500">Approve</Button>
+                <Button className="text-white bg-[#0E7A60] hover:bg-[#0E7A60]">Approve</Button>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ const StatsSection = () => {
           </div>
         </div>
         <div className="mt-4 flex flex-row-reverse gap-2 items-center text-sm text-green-500">
-          <p className="mr-2 text-green-600">+1.01%</p>
+          <p className="mr-2 text-[#2FA84D]">+1.01%</p>
           <span><TrendingUp /></span>
         </div>
       </div>
@@ -35,7 +35,7 @@ const StatsSection = () => {
           </div>
         </div>
         <div className="mt-4 flex flex-row-reverse gap-2 items-center text-sm text-green-500">
-          <p className="mr-2 text-green-600">+1.01%</p>
+          <p className="mr-2 text-[#2FA84D]">+1.01%</p>
           <span><TrendingUp /></span>
         </div>
       </div>
@@ -50,7 +50,7 @@ const StatsSection = () => {
           </div>
         </div>
         <div className="mt-4 flex flex-row-reverse gap-2 items-center text-sm text-green-500">
-          <p className="mr-2 text-green-600">+1.01%</p>
+          <p className="mr-2 text-[#2FA84D]">+1.01%</p>
           <span><TrendingUp /></span>
         </div>
       </div>

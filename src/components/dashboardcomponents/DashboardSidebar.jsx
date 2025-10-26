@@ -12,6 +12,7 @@ import {
   Menu,
   ChevronRight,
   ChevronDown,
+  MessageCircleMore,
   UserCog,
   ScrollText,
   FileText,
@@ -31,6 +32,7 @@ const mainMenuItems = [
   { title: "Providers", href: "/dashboard/providers", icon: Store },
   { title: "Categories", href: "/dashboard/categories", icon: Grid3x3 },
   { title: "Withdraw", href: "/dashboard/withdraw", icon: Banknote },
+  { title: "Quickchat", href: "/dashboard/quickchat", icon: MessageCircleMore },
 ];
 
 const otherMenuItems = [
@@ -70,7 +72,6 @@ function LogoSection() {
 }
 
 
-
 function MenuSection({ title, items, onLinkClick }) {
   const location = useLocation();
   const [expandedItems, setExpandedItems] = useState([]);
@@ -94,9 +95,11 @@ function MenuSection({ title, items, onLinkClick }) {
           // Active state logic:
           const isActive =
             location.pathname === item.href || // Exact match for the route
-            (item.title === "Users" && location.pathname.startsWith("/dashboard/users/")) || // "Users" section active for all sub-routes
-            (item.title === "Providers" && location.pathname.startsWith("/dashboard/providers/")) || // "Providers" section active for all sub-routes
-            (item.title === "Setting" && location.pathname.startsWith("/dashboard/settings/")); // "Settings" section active
+            (item.title === "User" && location.pathname.startsWith("/dashboard/users")) || // "Users" section active for all sub-routes (e.g. /users/useraccount)
+            (item.title === "Providers" && location.pathname.startsWith("/dashboard/providers")) || // "Providers" section active for all sub-routes
+            (item.title === "Setting" && location.pathname.startsWith("/dashboard/settings")) || // "Settings" section active
+            (item.title === "Dashboard" && location.pathname === "/dashboard") || // Dashboard section active only for /dashboard
+            (item.title === "Dashboard" && location.pathname === "/dashboard/notifications"); // For /dashboard/all-notifications route specifically
 
           const hasChildren = !!item.children?.length;
           const expanded = isExpanded(item.href);
@@ -179,7 +182,6 @@ function MenuSection({ title, items, onLinkClick }) {
     </div>
   );
 }
-
 
 
 function SidebarNav({ onLinkClick }) {

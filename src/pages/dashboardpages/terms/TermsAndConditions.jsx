@@ -22,17 +22,17 @@ const TermsAndConditions = () => {
   return (
     <div className="font-sans pr-5">
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-4">
 
 
         {/* Header */}
-        <h2 className="text-2xl sm:text-xl font-semibold text-black p-5 rounded-lg flex items-center">
+        <h2 className="text-2xl sm:text-xl font-semibold text-black  rounded-lg flex items-center">
           <MdOutlineKeyboardArrowLeft size={40} className="cursor-pointer" onClick={() => navigate(-1)} />
           Terms and Conditions
         </h2>
 
         {/* Edit Button */}
-        <div className="flex p-4">
+        <div className="flex">
           <Link to="/dashboard/settings/editterms">
             <Button className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white rounded-lg flex items-center space-x-1 shadow-md">
               <Edit className="h-4 w-4" />

@@ -9,9 +9,9 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 // Pending Actions Component
 const PendingActions = () => {
     const actions = [
-        { title: "Verification", count: "12 providers awaiting verifications", color: "bg-green-100", action: "Review",icon:<ShieldCheck />,textcolor:"text-blue-300" },
-        { title: "Support", count: "8 new chat", color: "bg-orange-100", action: "Respond",icon:<MessageSquareMore />,textcolor:"text-orange-200" },
-        { title: "Reports", count: "5 new report", color: "bg-red-100", action: "Investigate",icon:<CircleAlert />,textcolor:"text-red-400" },
+        { title: "Verification", count: "12 providers awaiting verifications", color: "bg-[#00CD491A]", action: "Review", icon: <ShieldCheck />, textcolor: "text-blue-300", btnbg: "bg-[#0E7A60]" },
+        { title: "Support", count: "8 new chat", color: "bg-[#FCE8D9]", action: "Respond", icon: <MessageSquareMore />, textcolor: "text-orange-200", btnbg: "bg-[#F3934F]" },
+        { title: "Reports", count: "5 new report", color: "bg-[#FDDEDE]", action: "Investigate", icon: <CircleAlert />, textcolor: "text-red-400", btnbg: "bg-[#F34F4F]" },
     ];
 
     return (
@@ -19,26 +19,26 @@ const PendingActions = () => {
             <div className="text-lg font-semibold">Pending Actions</div>
             <div className="flex flex-col gap-4">
                 {actions.map((action, index) => (
-                <div key={index} className={`p-4 rounded-lg ${action.color} flex items-center justify-between`}>
-                    <div className="text-sm font-medium flex flex-row-reverse items-center gap-3">
-                        <div>
+                    <div key={index} className={`p-4 rounded-lg ${action.color} flex items-center justify-between`}>
+                        <div className="text-sm font-medium flex flex-row-reverse items-center gap-3">
+                            <div>
 
-                        
-                       <p> {action.title} </p>
-                       <span className="text-xs text-gray-600">{action.count} New</span>
-                       </div>
-                        <div className={`p-3 bg-white rounded-full ${action.textcolor}`}>
-                            {action.icon}
+
+                                <p> {action.title} </p>
+                                <span className="text-xs text-gray-600">{action.count}</span>
+                            </div>
+                            <div className={`p-3 bg-white rounded-full ${action.textcolor}`}>
+                                {action.icon}
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            {/* <span className="text-xs text-gray-600">{action.count} New</span> */}
+                            <Button className={`px-3 rounded-full hover:${action.btnbg} py-1 ${action.btnbg}`}>
+                                {action.action}
+                            </Button>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                        {/* <span className="text-xs text-gray-600">{action.count} New</span> */}
-                        <Button variant="outline" className="px-3 py-1">
-                            {action.action} <ChevronRight size={16} />
-                        </Button>
-                    </div>
-                </div>
-            ))}
+                ))}
             </div>
         </div>
     );

@@ -44,21 +44,17 @@ const Faq = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="font-sans p-6">
+    <div className="font-sans">
       {/* Header */}
-      <div className="flex items-center justify-between mb-5">
-        {/* <h2 className="text-xl sm:text-2xl font-bold text-black px-5 py-3 rounded-md">
-          Update FAQ
-        </h2> */}
+      <div className="flex items-center justify-between mb-4">
+        
 
-        <h2 className="text-2xl sm:text-xl font-semibold text-black p-5 rounded-lg flex items-center">
+        <h2 className="text-2xl sm:text-xl font-semibold text-black rounded-lg flex items-center">
           <MdOutlineKeyboardArrowLeft size={40} className="cursor-pointer" onClick={() => navigate(-1)} />
           Update FAQ
         </h2>
 
-        {/* <Button className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white rounded-md shadow-md">
-          + Add FAQ
-        </Button> */}
+       
 
         <AlertDialog>
           <AlertDialogTrigger><Button className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white rounded-md shadow-md ">

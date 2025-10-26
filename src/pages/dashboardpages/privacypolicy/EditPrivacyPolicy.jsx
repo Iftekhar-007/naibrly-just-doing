@@ -106,7 +106,7 @@ const EditTermsAndConditions = () => {
   return (
     <div className="">
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-4">
 
 
         {/* Header */}
@@ -116,7 +116,7 @@ const EditTermsAndConditions = () => {
         </div>
 
         {/* Save Button */}
-        <div className="p-4">
+        <div className="">
           <Button
             onClick={handleSaveChanges}
             className="bg-[#0E7A60] hover:bg-[#0E7A60] text-white px-8 py-2 rounded-md"
