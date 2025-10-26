@@ -109,7 +109,7 @@ const Faq = () => {
             {faqs.map((faq, index) => (
               <tr
                 key={faq.id}
-                className={`hover:bg-gray-100 ${index % 2 === 1 ? "bg-gray-50" : "bg-white"
+                className={`hover:bg-[#0E7A601A] ${index % 2 === 1 ? "bg-gray-50" : "bg-white"
                   }`}
               >
                 <td className="py-3 px-4 border-b">{faq.id}</td>

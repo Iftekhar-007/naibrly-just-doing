@@ -43,7 +43,7 @@ const DashPayment = () => {
 
     const renderTableRows = () => {
         return users.map((user) => (
-            <tr key={user.id} className="border-b hover:bg-gray-50 cursor-pointer" onClick={() => handleRowClick(user)}>
+            <tr key={user.id} className="border-b hover:bg-[#0E7A601A] cursor-pointer" onClick={() => handleRowClick(user)}>
                 <td className="px-6 py-4">{user.date}</td>
                 <td className="px-6 py-4">{user.id}</td>
                 <td className="px-6 py-4">{user.provider}</td>

@@ -42,7 +42,7 @@ const AllUsers = () => {
     const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
 
     return currentUsers.map((user) => (
-      <tr key={user.id} className="border-b hover:bg-gray-50">
+      <tr key={user.id} className="border-b hover:bg-[#0E7A601A]">
         <td className="px-6 py-4">{user.id}</td>
         <td className="px-6 py-4">{user.name}</td>
         <td className="px-6 py-4">{user.email}</td>

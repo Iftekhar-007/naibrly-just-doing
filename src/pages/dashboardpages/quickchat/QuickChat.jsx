@@ -237,7 +237,7 @@ const QuickChat = () => {
                     </thead>
                     <tbody>
                         {tableData.map((row) => (
-                            <tr key={row.id} className="hover:bg-[#0E7A601A]/90">
+                            <tr key={row.id} className="hover:bg-[#0E7A601A]">
                                 <td className="px-4 py-2 border-b">{row.id}</td>
                                 <td className="px-4 py-2 border-b">{row.messageText}</td>
                                 <td className="px-4 py-2 border-b">{row.createdDate}</td>

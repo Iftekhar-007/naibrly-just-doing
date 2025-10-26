@@ -97,7 +97,7 @@ const Support = () => {
 
             <TableBody>
               {tickets.map((ticket, index) => (
-                <TableRow key={index}>
+                <TableRow key={index} className="hover:bg-[#0E7A601A]">
                   <TableCell>{ticket.id}</TableCell>
                   <TableCell>{ticket.name}</TableCell>
                   <TableCell>{ticket.email}</TableCell>

@@ -125,7 +125,7 @@ const Withdraw = () => {
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={row.id}>
+            <tr key={row.id} className="hover:bg-[#0E7A601A]">
               <td className="border-b px-4 py-2">
                 <input type="checkbox" className="form-checkbox" />
               </td>
